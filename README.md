@@ -1,5 +1,5 @@
 # responsive_mail
-Responsive and liquid HTML mail templates
+Responsive and liquid HTML mail templates  
 HTMLメール（リキッドとレスポンシブ対応）のgulp開発環境です。
 
 ## 対応環境
@@ -11,15 +11,14 @@ HTMLメール（リキッドとレスポンシブ対応）のgulp開発環境で
 - Android Gmail(Android6)： リキッドとレスポンシブ表示
 
 ## ディレクトリ構成
-|src|ソース|
-|dist|出力ディレクトリ|
+|src|ソース|  
+|dist|出力ディレクトリ|  
 
 ## ファイル構成
-|template.html|基本テンプレート|
-|sample_mail.html|基本テンプレートを使用したサンプルメール|
+|template.html|基本テンプレート|  
+|sample_mail.html|基本テンプレートを使用したサンプルメール|  
 
 ## 開発モード
-- watchする
 ```shell
 gulp
 ```
