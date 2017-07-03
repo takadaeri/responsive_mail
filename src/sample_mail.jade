@@ -1,0 +1,421 @@
+include /_mixin/module
+
+- var mail_title = 'MAIL TITLE'
+- var mail_width = 640
+- var back_color = '#f0eeeb'
+- var head_back_color = '#ffffff'
+- var img_path   = 'img/sample_mail1/'
+- var tble_style = 'border-spacing:0;outline:none;margin:0;padding:0;border:none;'
+- var img_style = 'outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;clear:both;display:block!important;border:none;height:auto;float:none;width:100%;'
+- var border_style = 'height:1px;line-height:0;font-size:0;'
+- var td_style = 'line-height:0;font-size:0;mso-line-height-rule:exactly;'
+- var td_space_style = 'line-height:1;font-size:1px;mso-line-height-rule:exactly;'
+- var spacer_style = 'outline:none;text-decoration:none;display:block!important;border:none;'
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+html(lang="ja")
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(http-equiv="Content-Style-Type" content="text/css")
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport" content="width=device-width")
+    //[if IE ]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/><![endif]
+    title #{mail_title}
+    
+    style(type="text/css").
+        <!--
+        body{font-family:'メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+        body {-webkit-text-size-adjust: none;}
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,pre,p,blockquote{margin:0;padding:0;}
+        h1,h2,h3{font-size:100%;font-weight:normal;line-height:100%;}
+        body{margin:0;padding:0;}
+        table{border-spacing:0;}
+        table td{border-collapse:collapse;}
+        img{border:0;vertical-align:bottom;}
+        a{color:#47a0cc;text-decoration:none;}
+        a:link{color:#47a0cc;text-decoration:none;}
+        a:hover{color:#47a0cc;text-decoration:none;}
+        a:visited{color:#47a0cc;text-decoration:none;}
+        .gmail-webbtn{position:relative;top:1px;}
+        @media only screen and (max-width: 640px){
+            .sp-wrap {
+              padding: 0 15px;
+            }
+            .left-box,.right-box,.col-box {
+              display:block !important;
+              width:100% !important;
+              float:none !important;
+            }
+            .right-box {
+              margin-top:20px !important;
+            }
+            .right-box-inr {
+              padding-left:0px !important;
+            }
+            .col-box-mt {
+              margin-top:20px !important;
+            }
+            .col-box-inr {
+              padding-left:0px !important;
+              padding-right:0px !important;
+            }
+        }
+        -->
+    mixin mso_css()
+
+  body(leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin:0;padding:0;line-height:140%;color:#333333;background-color:#{back_color};")
+
+
+
+    <!-- =============== header =============== -->
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{head_back_color};' bgcolor='#{head_back_color}')
+          div(style='max-width:#{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor='#ffffff')
+              +Tr_spacer(5,20)
+              tr
+                +Td_spacer(5)
+                td(width='50%' align='left')
+                  div(style='max-width:140px;')
+                    //[if gte mso 9]><table width="140" cellpadding="0" cellspacing="0"><tr><td><![endif]
+                    table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor='#ffffff')
+                      tr
+                        td(width='100%' align='left')
+                          a(href="http://www.google.com" target="_blank")
+                            img(src="#{img_path}logo.jpg" border='0' alt='' style='#{img_style}max-width:140px;' width='140')
+                    //[if gte mso 9]></td></tr></table><![endif]
+                +Td_spacer(5)
+                td(width='35%' align='right' style='font-size:11px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#333333") 表示されない場合は
+                  a(href="#" target="_blank")
+                    font(color="#47a0cc") こちら
+                +Td_spacer(5)
+              +Tr_spacer(5,20)
+            +mso_coment_end()
+
+
+    <!-- ++++++ block background ++++++ -->    
+    +SpacerGray(20)
+
+
+
+
+    <!-- =============== content =============== -->
+
+
+    <!-- ++++++ full column - main ++++++ --> 
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#ffe902;' bgcolor='#ffe902')
+          div(style='max-width:#{mail_width}px;' class="sp-wrap")
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffe902;' bgcolor="#ffe902")
+              tr
+                td(width='100%' align='center')
+                  a(href="#" target="_blank")
+                    img(src="#{img_path}main.jpg" border='0' alt='' style='#{img_style}max-width:640px;' width='640')
+            +mso_coment_end()
+
+
+    <!-- ++++++ block background ++++++ -->    
+    +SpacerGray(20)
+
+
+    <!-- ++++++ heading sub & main title - center ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width:#{mail_width}px;' class="sp-wrap")
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}')
+                    +Tr_spacer(3,5)
+                    tr
+                      td(width='100%' align='center' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(style="font-weight:bold;" color="#0e9753") PICK UP!
+                    +Tr_spacer(3,1)
+                +Td_spacer(5)
+            +mso_coment_end()
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width:#{mail_width}px;' class="sp-wrap")
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}')
+                    +Tr_spacer(3,2)
+                    tr
+                      td(width='100%' align='center' style='font-size:20px;mso-line-height-rule:exactly;line-height:24px;')
+                        font(style="font-weight:bold;" color="#000000") 商品情報
+                    +Tr_spacer(3,5)
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ media responsive - v3 ++++++ -->
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width:#{mail_width}px;' class="sp-wrap")
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' valign="top")
+                  div(style="display:block;")
+                    //[if gte mso 9]><table width="100%" cellpadding="0" cellspacing="0"><tr><td width="33.3333333%" valign="top"><![endif]
+                    div(style="float:left;width:33.3333333%;" class="col-box")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 10px 0 0;' class="col-box-inr")
+                        tr
+                          td(align='center')
+                            a(href="#" target="_blank")
+                              img(src="#{img_path}thum1.jpg" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='15')
+                        tr
+                          td(style='font-size:15px;mso-line-height-rule:exactly;line-height:22px;')
+                            font(style="font-weight:bold;" color="#333333") デコタンゴール パウンドケーキ
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='5')
+                        tr
+                          td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                            font(color="#333333") 「ポンカン」×「清見」のしっかり濃い甘さ
+                    //[if gte mso 9]></td><td width="33.3333333%" valign="top"><![endif]
+                    div(style="float:left;width:33.3333333%;" class="col-box col-box-mt")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 5px;' class="col-box-inr")
+                        tr
+                          td(align='center')
+                            a(href="#" target="_blank")
+                              img(src="#{img_path}thum2.jpg" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='15')
+                        tr
+                          td(style='font-size:15px;mso-line-height-rule:exactly;line-height:22px;')
+                            font(style="font-weight:bold;" color="#333333") ニューサマーオレンジプリン
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='5')
+                        tr
+                          td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                            font(color="#333333") 爽やかな酸味とふわふわした食感の白皮
+                    //[if gte mso 9]></td><td width="33.3333333%" valign="top"><![endif]
+                    div(style="float:left;width:33.3333333%;" class="col-box col-box-mt")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 0 0 10px;' class="col-box-inr")
+                        tr
+                          td(align='center')
+                            a(href="#" target="_blank")
+                              img(src="#{img_path}thum3.jpg" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='15')
+                        tr
+                          td(style='font-size:15px;mso-line-height-rule:exactly;line-height:22px;')
+                            font(style="font-weight:bold;" color="#333333") カラマンダリンのドライフルーツ
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='5')
+                        tr
+                          td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                            font(color="#333333") 遅咲きのニューフェイス柑橘
+                    //[if gte mso 9]></tr></table><![endif]
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerWht(40)
+
+    <!-- ++++++ block background ++++++ -->    
+    +SpacerGray(20)
+
+    <!-- ++++++ heading top & bottom border - center ++++++ -->    
+    +SpacerGreen(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width:#{mail_width}px;' class="sp-wrap")
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffe902;border-top:1px solid #0e9753;border-bottom:1px solid #0e9753;' bgcolor="#ffe902")
+              tr
+                +Td_spacer(5)
+                td(width='90%')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}')
+                    +Tr_spacer(3,12)
+                    tr
+                      td(width='100%' align='center' style='font-size:20px;mso-line-height-rule:exactly;line-height:24px;')
+                        font(style="font-weight:bold;" color="#0e9753") 今ならまとめ買いで10%OFF！
+                    +Tr_spacer(3,12)
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerGreen(10)
+
+
+
+    <!-- ++++++ text one column ++++++ -->    
+    +SpacerGreen(10)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width:#{mail_width}px;' class="sp-wrap")
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#0e9753;' bgcolor="#0e9753")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                  font(color="#ffffff") 対象商品をまとめてお買い上げいただくと、合計金額から割引料金が差し引かれます。
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+    <!-- ++++++ button ++++++ -->    
+    +SpacerGreen(15)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width:#{mail_width}px;' class="sp-wrap")
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#0e9753;' bgcolor="#0e9753")
+              tr
+                +Td_spacer(15)
+                td(width='70%' align='center' style='#{tble_style}font-size:18px;mso-line-height-rule:exactly;line-height:20px;')
+
+                  table(aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width='100%' style="margin:auto;")
+                    tr
+                      td(style="background:#ffffff;text-align:center;border-radius:5px;")
+                        a(href="http://www.google.com" target="_blank" style="background: #ffffff; border: 2px solid #ffffff; padding: 13px 25px;  font-size: 18px; line-height: 20px; mso-line-height-rule:exactly; text-align: center; text-decoration: none; display: block; color:#0e9753;border-radius:5px;font-weight:bold;" class="mso-btn")
+                          span(class="gmail-webbtn") お買い物する
+
+                +Td_spacer(15)
+            +mso_coment_end()
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerGreen(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width:#{mail_width}px;' class="sp-wrap")
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#0e9753;' bgcolor="#0e9753")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #ffe902;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ attention ++++++ -->    
+    +SpacerGreen(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width:#{mail_width}px;' class="sp-wrap")
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#0e9753;' bgcolor="#0e9753")
+              tr
+                +Td_spacer(5)
+                td(width='10' align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#ffffff") *
+                td(width='5')
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="1" style='#{spacer_style}')
+                td(align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#ffffff") 購入しようとしている商品がキャンペーンの対象商品であること
+                +Td_spacer(5)
+              tr
+                +Td_spacer(5)
+                td(width='10' align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#ffffff") *
+                td(width='5')
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="1" style='#{spacer_style}')
+                td(align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#ffffff") ショッピングカートに、キャンペーンで指定された数以上の対象商品が入っていること
+                +Td_spacer(5)
+              tr
+                +Td_spacer(5)
+                td(width='10' align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#ffffff") *
+                td(width='5')
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="1" style='#{spacer_style}')
+                td(align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#ffffff") 注文確定画面で、キャンペーン割引金額分が注文合計金額から差し引かれていること
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerGreen(20)
+
+
+
+
+
+    <!-- ++++++ full column - footer ++++++ --> 
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#f0eeeb;' bgcolor='#f0eeeb')
+          div(style='max-width:#{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#f0eeeb;' bgcolor="#f0eeeb")
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:12px;mso-line-height-rule:exactly;line-height:18px;')
+                  font(color="#A1A6AF") Responsive and liquid HTML mail templates
+                +Td_spacer(5)
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:12px;mso-line-height-rule:exactly;line-height:18px;')
+                  font(color="#A1A6AF") + + Support Environment + +<br>
+                    | Outlook2010: Fixed width for non-responsive and liquid<br>
+                    | Gmail: Responsive media query for non-compliant liquid only<br>
+                    | Thunderbird: Responsive and liquid work properly<br>
+                    | iOS Standard Mailer: Responsive and liquid work properly<br>
+                    | ANDROID4 or higher standard Mailer: responsive and liquid work properly<br>
+                +Td_spacer(5)    
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ footer copyright ++++++ --> 
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#0e9753;' bgcolor='#0e9753')
+          div(style='max-width:#{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#0e9753;' bgcolor="#0e9753")
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  a(href="#" target="_blank" style="color:#ffffff;")
+                    font(color="#ffffff") &copy; perisshimo.com
+                +Td_spacer(5)
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+

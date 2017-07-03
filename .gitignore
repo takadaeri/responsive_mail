@@ -1,0 +1,16 @@
+npm-debug.log
+~*
+.DS_Store
+*.lnk
+Desktop.ini
+Thumbs.db
+node_modules
+/node_modules
+/node_modules/
+node_modules/
+/tmp
+/dist
+/doc
+*.map
+/.idea/
+*.iml

@@ -1,0 +1,1132 @@
+include /_mixin/module
+
+- var mail_title = 'MAIL TITLE'
+- var mail_width = 640
+- var back_color = '#f7f7f7'
+- var head_back_color = '#ffffff'
+- var img_path   = 'img/'
+- var tble_style = 'border-spacing:0;outline:none;margin:0;padding:0;border:none;'
+- var img_style = 'outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;clear:both;display:block!important;border:none;height:auto;float:none;width:100%;'
+- var border_style = 'height:1px;line-height:0;font-size:0;'
+- var td_style = 'line-height:0;font-size:0;mso-line-height-rule:exactly;'
+- var td_space_style = 'line-height:1;font-size:1px;mso-line-height-rule:exactly;'
+- var spacer_style = 'outline:none;text-decoration:none;display:block!important;border:none;'
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+html(lang="ja")
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(http-equiv="Content-Style-Type" content="text/css")
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport" content="width=device-width")
+    //[if IE ]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/><![endif]
+    title #{mail_title}
+    
+    style(type="text/css").
+        <!--
+        body{font-family:'メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;}
+        body {-webkit-text-size-adjust: none;}
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,pre,p,blockquote{margin:0;padding:0;}
+        h1,h2,h3{font-size:100%;font-weight:normal;line-height:100%;}
+        body{margin:0;padding:0;}
+        table{border-spacing:0;}
+        table td{border-collapse:collapse;}
+        img{border:0;vertical-align:bottom;}
+        a{color:#47a0cc;text-decoration:none;}
+        a:link{color:#47a0cc;text-decoration:none;}
+        a:hover{color:#47a0cc;text-decoration:none;}
+        a:visited{color:#47a0cc;text-decoration:none;}
+        .gmail-webbtn{position:relative;top:1px;}
+        @media only screen and (max-width: 640px){
+            .left-box,.right-box,.col-box {
+              display:block !important;
+              width:100% !important;
+              float:none !important;
+            }
+            .right-box {
+              margin-top:20px !important;
+            }
+            .right-box-inr {
+              padding-left:0px !important;
+            }
+            .col-box-mt {
+              margin-top:20px !important;
+            }
+            .col-box-inr {
+              padding-left:0px !important;
+              padding-right:0px !important;
+            }
+        }
+        -->
+    mixin mso_css()
+
+  body(leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin:0;padding:0;line-height:140%;color:#333333;background-color:#{back_color};")
+
+
+
+    <!-- =============== header =============== -->
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{head_back_color};' bgcolor='#{head_back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor='#ffffff')
+              +Tr_spacer(5,20)
+              tr
+                +Td_spacer(5)
+                td(width='50%' align='left')
+                  div(style='max-width:140px;')
+                    //[if gte mso 9]><table width="140" cellpadding="0" cellspacing="0"><tr><td><![endif]
+                    table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor='#ffffff')
+                      tr
+                        td(width='100%' align='left')
+                          a(href="http://www.google.com" target="_blank")
+                            img(src="http://dummyimage.com/140x50/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:140px;' width='140')
+                    //[if gte mso 9]></td></tr></table><![endif]
+                +Td_spacer(5)
+                td(width='35%' align='right')
+                  a(href="#" target="_blank")
+                    font(style="font-size:12px;line-height:120%;" color="#47a0cc") Top Link
+                +Td_spacer(5)
+              +Tr_spacer(5,20)
+            +mso_coment_end()
+
+
+    <!-- ++++++ block background ++++++ -->    
+    +SpacerGray(20)
+
+
+
+
+    <!-- =============== content =============== -->
+
+
+
+    <!-- ++++++ image one column ++++++ -->    
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}')
+              tr
+                td(width='100%' align='center')
+                  a(href="#" target="_blank")
+                    img(src="http://dummyimage.com/640x300/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:640px;' width='640')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ heading sub & main title - center ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}')
+                    +Tr_spacer(3,5)
+                    tr
+                      td(width='100%' align='center' style='font-size:18px;mso-line-height-rule:exactly;line-height:24px;')
+                        font(color="#F15C61") CAPTION (18px: center)
+                    +Tr_spacer(3,1)
+                +Td_spacer(5)
+            +mso_coment_end()
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}')
+                    +Tr_spacer(3,5)
+                    tr
+                      td(width='100%' align='center' style='font-size:20px;mso-line-height-rule:exactly;line-height:24px;')
+                        font(style="font-weight:bold;" color="#F15C61") TITLE (large: 20px: center)
+                    +Tr_spacer(3,5)
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+    <!-- ++++++ heading top & bottom border - center ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}border-top:3px solid #F15C61;border-bottom:3px solid #F15C61;')
+                    +Tr_spacer(3,12)
+                    tr
+                      td(width='100%' align='center' style='font-size:20px;mso-line-height-rule:exactly;line-height:24px;')
+                        font(style="font-weight:bold;" color="#F15C61") TITLE (large: 20px: center: border)
+                    +Tr_spacer(3,12)
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerWht(10)
+
+
+    <!-- ++++++ heading middle - border & left ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}border-bottom: 2px solid #F15C61;')
+                    +Tr_spacer(3,5)
+                    tr
+                      td(width='100%' align='left' style='font-size:16px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#263033") TITLE (middle: 16px: border)
+                    +Tr_spacer(3,10)
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+    <!-- ++++++ heading small - left ++++++ -->
+    +SpacerWht(15)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' style='font-size:15px;mso-line-height-rule:exactly;line-height:22px;')
+                  font(color="#333333") TITLE (small: 15px)
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+    <!-- ++++++ text one column ++++++ -->    
+    +SpacerWht(10)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                  font(color="#333333") text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text 
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerWht(15)
+
+
+    <!-- ++++++ text link - left ++++++ -->
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                  a(href="http://www.google.com" target="_blank")
+                    font(color="#47a0cc") &raquo;&nbsp;link (left)
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+    <!-- ++++++ text link - center ++++++ -->
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                  a(href="http://www.google.com" target="_blank")
+                    font(color="#47a0cc") &raquo;&nbsp;link (center)
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+    <!-- ++++++ text link - right ++++++ -->
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='right' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                  a(href="http://www.google.com" target="_blank")
+                    font(color="#47a0cc") &raquo;&nbsp;link (right)
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+    +SpacerWht(20)
+
+
+    <!-- ++++++ color background - Red ++++++ -->    
+    +SpacerRed(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#F15C61;' bgcolor="#F15C61")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:20px;mso-line-height-rule:exactly;line-height:24px;')
+                  font(style="font-weight:bold;" color="#ffffff") TITLE (large: 20px: center)
+                +Td_spacer(5)
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='10' border='0' height="10" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                  font(color="#ffffff") text text text text text text text text text text text text 
+                +Td_spacer(5)
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='10' border='0' height="10" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                  a(href="http://www.google.com" target="_blank")
+                    font(color="#ffffff") &raquo;&nbsp;link
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerRed(20)
+
+
+
+    <!-- ++++++ color background - Blue ++++++ -->    
+    +SpacerBlue(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#47a0cc;' bgcolor="#47a0cc")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:20px;mso-line-height-rule:exactly;line-height:24px;')
+                  font(style="font-weight:bold;" color="#ffffff") TITLE (large: 20px: center)
+                +Td_spacer(5)
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='10' border='0' height="10" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                  font(color="#ffffff") text text text text text text text text text text text text 
+                +Td_spacer(5)
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='10' border='0' height="10" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                  a(href="http://www.google.com" target="_blank")
+                    font(color="#ffffff") &raquo;&nbsp;link
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerBlue(20)
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ heading top & bottom border - center ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}border-top:3px solid #F15C61;border-bottom:3px solid #F15C61;')
+                    +Tr_spacer(3,12)
+                    tr
+                      td(width='100%' align='center' style='font-size:20px;mso-line-height-rule:exactly;line-height:24px;')
+                        font(style="font-weight:bold;" color="#F15C61") RESPONSIVE AREA
+                    +Tr_spacer(3,12)
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerWht(10)
+
+
+
+
+    <!-- ++++++ media responsive - v1 ++++++ -->
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' valign="top")
+                  div(style="display:block;")
+                    //[if gte mso 9]><table width="100%" cellpadding="0" cellspacing="0"><tr><td width="31.6%" valign="top"><![endif]
+                    div(style="float:left;width:31.6%;" class="left-box")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}')
+                        tr
+                          td(align='center')
+                            a(href="#" target="_blank")
+                              img(src="http://dummyimage.com/182x100/999999/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                    //[if gte mso 9]></td><td width="68.4%" valign="top"><![endif]
+                    div(style="float:left;width:68.4%;" class="right-box")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding-left:15px;' class="right-box-inr")
+                        tr
+                          td(style='font-size:16px;mso-line-height-rule:exactly;line-height:24px;')
+                            font(color="#333333") TITLE (small: 16px)
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='10')
+                        tr
+                          td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                            font(color="#333333") text text text text text text text text text text text text text text text text text text 
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='10')
+                        tr
+                          td
+                            a(href="http://www.google.com" target="_blank")
+                              font(style="font-size:13px;" color="#47a0cc") &raquo;&nbsp;link
+                    //[if gte mso 9]></tr></table><![endif]
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+    <!-- ++++++ media responsive - v2 ++++++ -->
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' valign="top")
+                  div(style="display:block;")
+                    //[if gte mso 9]><table width="100%" cellpadding="0" cellspacing="0"><tr><td width="50%" valign="top"><![endif]
+                    div(style="float:left;width:50%;" class="col-box")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 7.5px 0 0;' class="col-box-inr")
+                        tr
+                          td(align='center')
+                            a(href="#" target="_blank")
+                              img(src="http://dummyimage.com/280x100/999999/fff" border='0' alt='' style='#{img_style}max-width:280px;' width='280')
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='10')
+                        tr
+                          td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                            font(color="#333333") text text text text text text text text text text text text text text text text text text
+                    //[if gte mso 9]></td><td width="50%" valign="top"><![endif]
+                    div(style="float:left;width:50%;" class="col-box col-box-mt")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 0 0 7.5px;' class="col-box-inr")
+                        tr
+                          td(align='center')
+                            a(href="#" target="_blank")
+                              img(src="http://dummyimage.com/280x100/999999/fff" border='0' alt='' style='#{img_style}max-width:280px;' width='280')
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='10')
+                        tr
+                          td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                            font(color="#333333") text text text text text text text text text text text text text text text text text text
+                    //[if gte mso 9]></tr></table><![endif]
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ media responsive - v3 ++++++ -->
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' valign="top")
+                  div(style="display:block;")
+                    //[if gte mso 9]><table width="100%" cellpadding="0" cellspacing="0"><tr><td width="33.3333333%" valign="top"><![endif]
+                    div(style="float:left;width:33.3333333%;" class="col-box")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 10px 0 0;' class="col-box-inr")
+                        tr
+                          td(align='center')
+                            a(href="#" target="_blank")
+                              img(src="http://dummyimage.com/182x100/999999/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='10')
+                        tr
+                          td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                            font(color="#333333") text text text text text text text text text text text text text text text text text text
+                    //[if gte mso 9]></td><td width="33.3333333%" valign="top"><![endif]
+                    div(style="float:left;width:33.3333333%;" class="col-box col-box-mt")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 5px;' class="col-box-inr")
+                        tr
+                          td(align='center')
+                            a(href="#" target="_blank")
+                              img(src="http://dummyimage.com/182x100/999999/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='10')
+                        tr
+                          td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                            font(color="#333333") text text text text text text text text text text text text text text text text text text
+                    //[if gte mso 9]></td><td width="33.3333333%" valign="top"><![endif]
+                    div(style="float:left;width:33.3333333%;" class="col-box col-box-mt")
+                      table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 0 0 10px;' class="col-box-inr")
+                        tr
+                          td(align='center')
+                            a(href="#" target="_blank")
+                              img(src="http://dummyimage.com/182x100/999999/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                        tr
+                          td
+                            img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='10')
+                        tr
+                          td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                            font(color="#333333") text text text text text text text text text text text text text text text text text text
+                    //[if gte mso 9]></tr></table><![endif]
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ heading top & bottom border - center ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='90%')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}border-top:3px solid #F15C61;border-bottom:3px solid #F15C61;')
+                    +Tr_spacer(3,12)
+                    tr
+                      td(width='100%' align='center' style='font-size:20px;mso-line-height-rule:exactly;line-height:24px;')
+                        font(style="font-weight:bold;" color="#F15C61") LIQUID AREA
+                    +Tr_spacer(3,12)
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerWht(10)
+
+
+
+    <!-- ++++++ media block left ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='30%' align='left' valign="top" style="padding: 0 15px 0 0;")
+                  img(src="http://dummyimage.com/182x100/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                td(width='60%' align='left' valign="top")
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}') 
+                    tr
+                      td(style='font-size:16px;mso-line-height-rule:exactly;line-height:24px;')
+                        font(color="#333333") TITLE (small: 16px)
+                    tr
+                      td(width='100%')
+                        img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='10')
+                    tr
+                      td(style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#333333") text text text text text text text text text text text text text text text text text text 
+                    tr
+                      td(width='100%')
+                        img(src='#{img_path}spacer.gif' border='0' alt='' style='#{spacer_style}' width='1' height='10')
+                    tr
+                      td(width='100%' align='left' valign='center')
+                        a(href="http://www.google.com" target="_blank")
+                          font(style="font-size:13px;" color="#47a0cc") &raquo;&nbsp;link
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+    <!-- ++++++ image three column ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='30%' align='left')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 10px 0 0;')
+                    tr
+                      td(width='100%' align='center')
+                        a(href="#" target="_blank")
+                          img(src="http://dummyimage.com/182x100/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(width='100%' align='left' style='font-size:12px;mso-line-height-rule:exactly;line-height:18px;')
+                        font(color="#333333") caption
+                td(width='30%' align='left')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 5px;')
+                    tr
+                      td(width='100%' align='center')
+                        a(href="#" target="_blank")
+                          img(src="http://dummyimage.com/182x100/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(width='100%' align='left' style='font-size:12px;mso-line-height-rule:exactly;line-height:18px;')
+                        font(color="#333333") caption
+                td(width='30%' align='left')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 0 0 10px;')
+                    tr
+                      td(width='100%' align='center')
+                        a(href="#" target="_blank")
+                          img(src="http://dummyimage.com/182x100/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(width='100%' align='left' style='font-size:12px;mso-line-height-rule:exactly;line-height:18px;')
+                        font(color="#333333") caption
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ image two column ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='45%' align='left' valign='top')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 7.5px 0 0;')
+                    tr
+                      td(width='100%' align='center')
+                        a(href="#" target="_blank")
+                          img(src="http://dummyimage.com/280x100/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:280px;' width='280')
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(width='100%' align='left' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(style="font-weight:bold;" color='#333333') STLONG CAPTION 
+                    +Tr_spacer(1, 5)
+                    tr
+                      td(width='100%' align='left' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#333333") text text text text text text text 
+                    +Tr_spacer(1, 5)
+                    tr
+                      td(width='100%' align='left' valign='center')
+                        a(href="http://www.google.com" target="_blank")
+                          font(style="font-size:13px;" color="#47a0cc") &raquo;&nbsp;link
+                td(width='45%' align='left' valign='top')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 0 0 7.5px;')
+                    tr
+                      td(width='100%' align='center')
+                        a(href="#" target="_blank")
+                          img(src="http://dummyimage.com/280x100/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:280px;' width='280')
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(width='100%' align='left'  style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(style="font-weight:bold;" color='#333333') STLONG CAPTION 
+                    +Tr_spacer(1, 5)
+                    tr
+                      td(width='100%' align='left' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#333333") text text text text text text text 
+                    +Tr_spacer(1, 5)
+                    tr
+                      td(width='100%' align='left' valign='center')
+                        a(href="http://www.google.com" target="_blank")
+                          font(style="font-size:13px;" color="#47a0cc") &raquo;&nbsp;link
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ image three column - button ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='30%' align='left' valign='top')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 10px 0 0;')
+                    tr
+                      td(width='100%' align='center')
+                        a(href="#" target="_blank")
+                          img(src="http://dummyimage.com/182x182/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(align="left" style='font-size:14px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#333333") TITLE (small: 14px)
+                    +Tr_spacer(1, 5)
+                    tr
+                      td(width='100%' align='left' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#333333") text text text text text text 
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(align='left')
+
+                        table(aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width='100%' style="margin: auto").
+                          <tr>
+                              <td style=" background: #F15C61; text-align: center;">
+                                  <a href="http://www.google.com" target="_blank" style="background: #F15C61; border: 2px solid #F15C61; padding: 6px 10px;  font-size: 13px; line-height: 18px; text-align: center; text-decoration: none; display: block; color:#ffffff;" class="mso-btn">
+                                      &raquo;&nbsp;<span>LINK</span>
+                                  </a>
+                              </td>
+                          </tr>
+                td(width='30%' align='left' valign='top')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 5px;')
+                    tr
+                      td(width='100%' align='center')
+                        a(href="#" target="_blank")
+                          img(src="http://dummyimage.com/182x182/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(align="left" style='font-size:14px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#333333") TITLE (small: 14px)
+                    +Tr_spacer(1, 5)
+                    tr
+                      td(width='100%' align='left' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#333333") text text text text text text 
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(align='left')
+
+                        table(aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width='100%' style="margin: auto").
+                          <tr>
+                              <td style=" background: #F15C61; text-align: center;">
+                                  <a href="http://www.google.com" target="_blank" style="background: #F15C61; border: 2px solid #F15C61; padding: 6px 10px;  font-size: 13px; line-height: 18px; text-align: center; text-decoration: none; display: block; color:#ffffff;" class="mso-btn">
+                                      &raquo;&nbsp;<span>LINK</span>
+                                  </a>
+                              </td>
+                          </tr>
+                td(width='30%' align='left' valign='top')
+                  table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}padding: 0 0 0 10px;')
+                    tr
+                      td(width='100%' align='center')
+                        a(href="#" target="_blank")
+                          img(src="http://dummyimage.com/182x182/e5e5e5/fff" border='0' alt='' style='#{img_style}max-width:182px;' width='182')
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(align="left" style='font-size:14px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#333333") TITLE (small: 14px)
+                    +Tr_spacer(1, 5)
+                    tr
+                      td(width='100%' align='left' style='font-size:13px;mso-line-height-rule:exactly;line-height:20px;')
+                        font(color="#333333") text text text text text text 
+                    +Tr_spacer(1, 10)
+                    tr
+                      td(align='left')
+
+                        table(aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width='100%' style="margin: auto").
+                          <tr>
+                              <td style=" background: #F15C61; text-align: center;">
+                                  <a href="http://www.google.com" target="_blank" style="background: #F15C61; border: 2px solid #F15C61; padding: 6px 10px;font-size: 13px; line-height: 18px; text-align: center; text-decoration: none; display: block; color:#ffffff;" class="mso-btn">
+                                      &raquo;&nbsp;<span>LINK</span>
+                                  </a>
+                              </td>
+                          </tr>
+                +Td_spacer(5)
+            +mso_coment_end()
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+    <!-- ++++++ button - small ++++++ -->    
+    +SpacerWht(15)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(15)
+                td(width='70%' align='center' style='#{tble_style}font-size:18px;mso-line-height-rule:exactly;line-height:20px;')
+
+                  table(aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width='100%' style="margin: auto").
+                    <tr>
+                        <td style=" background: #252C3B; text-align: center;">
+                            <a href="http://www.google.com" target="_blank" style="background: #252C3B; border: 2px solid #252C3B; padding: 8px 25px;  font-size: 13px; line-height: 18px; mso-line-height-rule:exactly; text-align: center; text-decoration: none; display: block; color:#ffffff;" class="mso-btn">
+                                &raquo;&nbsp;<span class="gmail-webbtn">BUTTON</span>
+                            </a>
+                        </td>
+                    </tr>
+
+                +Td_spacer(15)
+            +mso_coment_end()
+
+
+    <!-- ++++++ button ++++++ -->    
+    +SpacerWht(15)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(15)
+                td(width='70%' align='center' style='#{tble_style}font-size:18px;mso-line-height-rule:exactly;line-height:20px;')
+
+                  table(aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width='100%' style="margin: auto").
+                    <tr>
+                        <td style=" background: #F15C61; text-align: center;">
+                            <a href="http://www.google.com" target="_blank" style="background: #F15C61; border: 2px solid #F15C61; padding: 13px 25px;  font-size: 18px; line-height: 20px; mso-line-height-rule:exactly; text-align: center; text-decoration: none; display: block; color:#ffffff;" class="mso-btn">
+                                &raquo;&nbsp;<span class="gmail-webbtn">BUTTON</span>
+                            </a>
+                        </td>
+                    </tr>
+
+                +Td_spacer(15)
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ button - border & inline block ++++++ -->    
+    +SpacerWht(15)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(15)
+                td(width='70%' align='center' style='#{tble_style}font-size:18px;mso-line-height-rule:exactly;line-height:20px;')
+                  table(aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width='100%' style="margin: auto")
+                    tr
+                      td(style="background:#ffffff; text-align:center;")
+                        a(href="http://www.google.com" target="_blank" style="background:#ffffff; border:2px solid #F15C61; padding:13px 25px;  font-size:18px; line-height:20px; mso-line-height-rule:exactly; text-align:center; text-decoration:none; display:inline-block; color:#F15C61;" class="mso-btn")
+                          | &nbsp;&nbsp;&raquo;&nbsp;
+                          span.gmail-webbtn BUTTON
+                          | &nbsp;&nbsp;
+                +Td_spacer(15)
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ line dashed ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+                td(width='90%' style="#{td_style}border-top:1px dashed #dbdbdb;" height='1')
+                td(width="5%")
+                  img(src='#{img_path}spacer.gif' width='1' border='0' height="0" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ attention ++++++ -->    
+    +SpacerWht(20)
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#{back_color};' bgcolor='#{back_color}')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#ffffff;' bgcolor="#ffffff")
+              tr
+                +Td_spacer(5)
+                td(width='20' align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#999999") *1
+                td(width='5')
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="1" style='#{spacer_style}')
+                td(align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#999999") attention message attention message attention message 
+                +Td_spacer(5)
+              tr
+                +Td_spacer(5)
+                td(width='20' align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#999999") *2
+                td(width='5')
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="1" style='#{spacer_style}')
+                td(align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#999999") attention message attention message 
+                +Td_spacer(5)
+              tr
+                +Td_spacer(5)
+                td(width='20' align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#999999") *3
+                td(width='5')
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="1" style='#{spacer_style}')
+                td(align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#999999") attention message <a href="#" target="_blank"><font style="text-decoration:underline;" color='#47a0cc'>link link</font></a>attention message attention message attention message 
+                +Td_spacer(5)
+              tr
+                +Td_spacer(5)
+                td(width='20' align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#999999") *4
+                td(width='5')
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="1" style='#{spacer_style}')
+                td(align='left' valign="top" style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  font(color="#999999") attention message attention message attention message attention message attention message 
+                +Td_spacer(5)
+            +mso_coment_end()
+    +SpacerWht(20)
+
+
+
+    <!-- ++++++ block background ++++++ -->    
+    +SpacerGray(40)
+
+
+
+
+    <!-- ++++++ full column - footer ++++++ --> 
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#444D5F;' bgcolor='#444D5F')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#444D5F;' bgcolor="#444D5F")
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' style='font-size:12px;mso-line-height-rule:exactly;line-height:18px;')
+                  font(color="#A1A6AF") Responsive and liquid HTML mail templates
+                +Td_spacer(5)
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='left' style='font-size:12px;mso-line-height-rule:exactly;line-height:18px;')
+                  font(color="#A1A6AF") + + Support Environment + +<br>
+                    | Outlook2010: Fixed width for non-responsive and liquid<br>
+                    | Gmail: Responsive media query for non-compliant liquid only<br>
+                    | Thunderbird: Responsive and liquid work properly<br>
+                    | iOS Standard Mailer: Responsive and liquid work properly<br>
+                    | ANDROID4 or higher standard Mailer: responsive and liquid work properly<br>
+                +Td_spacer(5)    
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+    <!-- ++++++ footer copyright ++++++ --> 
+    table(cellpadding='0' cellspacing='0' width='100%' style='#{tble_style}')
+      tr
+        td(align='center' style='background-color:#252C3B;' bgcolor='#252C3B')
+          div(style='max-width: #{mail_width}px;')
+            +mso_coment_start()
+            table(cellpadding='0' cellspacing='0' width='100%' border='0' style='#{tble_style}background-color:#252C3B;' bgcolor="#252C3B")
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+              tr
+                +Td_spacer(5)
+                td(width='90%' align='center' style='font-size:10px;mso-line-height-rule:exactly;line-height:14px;')
+                  a(href="#" target="_blank" style="color:#A1A6AF;")
+                    font(color="#A1A6AF") &copy; perisshimo.com
+                +Td_spacer(5)
+              tr
+                td(colspan="3")
+                  img(src='#{img_path}spacer.gif' width='5' border='0' height="20" style='#{spacer_style}')
+            +mso_coment_end()
+
+
+
+
