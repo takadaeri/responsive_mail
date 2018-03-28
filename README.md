@@ -1,6 +1,6 @@
 # responsive_mail
 Responsive and liquid HTML mail templates  
-HTMLメール（リキッドとレスポンシブ対応）のgulp開発環境です。
+HTMLメール（リキッドとレスポンシブ対応）のgulp開発環境ですoooo
 
 ## 対応環境
 - Outlook2010(win7)： fixed width ※固定幅表示/リキッドとレスポンシブ非対応のため
